@@ -15,14 +15,17 @@ class Counter extends Component{
 
     render() {
 
+        // property destructuring 
+        const {object, Delete, Increment, children} = this.props;
+
         return <React.Fragment>
-        {this.props.children}
+        {children}
         <span style={this.styles} className={this.getBadgeClasses()}>{this.formatCount()} </span>
-        <button onClick={() => this.props.Increment(this.props.object)} className="btn btn-secondary btn-sm">Increment</button>      
+        <button onClick={() => Increment(object)} className="btn btn-secondary btn-sm">Increment</button>      
         {/* <ul> */}
         {/* {this.TagsCheck()} */}
         {/* </ul> */}
-        <button onClick={() => this.props.Delete(this.props.object.id)} className="btn btn-danger btn-sm m-2">Delete</button>
+        <button onClick={() => Delete(object.id)} className="btn btn-danger btn-sm m-2">Delete</button>
         </React.Fragment>;
     }
 
