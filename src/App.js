@@ -10,7 +10,7 @@ function App() {
     return (
     <React.Fragment>
 
-    <NavBar>NavBar</NavBar>
+    <NavBar>NavBar1</NavBar>
 
     <main className="container">  
       <Counters/>
